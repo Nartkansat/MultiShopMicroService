@@ -1,0 +1,51 @@
+﻿@model List<ResultInboxMessageDto>
+
+@{
+    ViewData["Title"] = "Inbox";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+    int count = 0;
+}
+
+
+@await Component.InvokeAsync("_UserSidebarComponentPartial")
+
+<div class="col-10">
+    <h1>Gelen Mesajlar </h1>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Gönderen</th>
+                <th>Konu</th>
+                <th>Tarih</th>
+                <th>Durum</th>
+                <th>Sil</th>
+                <th>Mesajı Aç</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.SenderId</td>
+                    <td>@item.Subject</td>
+                    <td>@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                    <td>@item.IsRead</td>
+                    <td><a>Sil</a></td>
+                    <td>
+                        <a class="nav-link link-dark"  href="/User/Message/UpdateIsReadMessage/@item.UserMessageID">Mesajı Aç</a>
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+
+
+
+</div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "defaultProvider": "unpkg",
+  "libraries": [
+    {
+      "library": "@microsoft/signalr-protocol-msgpack@6.0.6",
+      "destination": "wwwroot/microsoft/signalr-protocol-msgpack/",
+      "files": [
+        "dist/browser/signalr-protocol-msgpack.min.js.map",
+        "dist/browser/signalr-protocol-msgpack.min.js",
+        "dist/browser/signalr-protocol-msgpack.js.map",
+        "dist/browser/signalr-protocol-msgpack.js"
+      ]
+    }
+  ]
+}

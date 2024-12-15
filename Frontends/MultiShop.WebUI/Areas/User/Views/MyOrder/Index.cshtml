@@ -1,0 +1,40 @@
+﻿@model List<ResultOrderingByUserIdDto>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+    int count = 0;
+}
+
+
+@await Component.InvokeAsync("_UserSidebarComponentPartial")
+
+        <div class="col-10">
+            <h1>Siparişlerim </h1>
+            <table class="table table-bordered table-striped">
+                <thead class="table-dark">
+                    <tr>
+                        <th>#</th>
+                        <th>Toplam Fiyat</th>
+                        <th>Tarih</th>
+                        <th>Detay</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach(var item in Model)
+                    {
+                        count++;
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.TotalPrice ₺</td>
+                            <td>@(((DateTime)item.OrderDate).ToString("dd-MMM-yyyy"))</td>
+                            <td><a>Sipariş Detayları</a></td>
+                        </tr>
+                    }
+            
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

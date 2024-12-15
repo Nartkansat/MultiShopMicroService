@@ -1,0 +1,22 @@
+﻿@model CreateMessageDto
+
+@{
+    ViewData["Title"] = "SendMessage";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+}
+
+@await Component.InvokeAsync("_UserSidebarComponentPartial")
+
+<div class="col-10">
+    <h1>Mesaj Gönder</h1>
+    <form method="post">
+        <input type="text" placeholder="Konu" asp-for="Subject" />
+        <textarea asp-for="MessageDetail"></textarea>
+        <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">
+            Mesajı Gönder
+        </button>
+    </form>
+
+</div>
+    </div>
+</div>

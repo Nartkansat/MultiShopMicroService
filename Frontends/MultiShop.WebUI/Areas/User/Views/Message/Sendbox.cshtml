@@ -1,0 +1,44 @@
+﻿@model List<ResultSendboxMessageDto>
+
+@{
+    ViewData["Title"] = "Sendbox";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+    int count = 0;
+}
+
+
+@await Component.InvokeAsync("_UserSidebarComponentPartial")
+
+<div class="col-10">
+    <h1>Gönderilen Mesajlar </h1>
+    <table class="table table-bordered table-striped">
+        <thead class="table-dark">
+            <tr>
+                <th>#</th>
+                <th>Alıcı</th>
+                <th>Konu</th>
+                <th>Tarih</th>
+                <th>Sil</th>
+                <th>Mesajı Aç</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                count++;
+                <tr>
+                    <td>@count</td>
+                    <td>@item.ReceiverId</td>
+                    <td>@item.Subject</td>
+                    <td>@(((DateTime)item.MessageDate).ToString("dd-MMM-yyyy"))</td>
+                    <td><a>Sil</a></td>
+                    <td><a>Mesajı Aç</a></td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+
+</div>
+    </div>
+</div>

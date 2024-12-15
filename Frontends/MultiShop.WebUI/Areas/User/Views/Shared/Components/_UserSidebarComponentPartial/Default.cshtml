@@ -1,0 +1,43 @@
+﻿<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-2">
+            <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 250px; height: 100vh;">
+                <ul class="nav nav-pills flex-column mb-auto">
+                    <li class="nav-item">
+                        <a href="/User/Profile/Index" class="nav-link link-dark" aria-current="page">
+                            <i class="bi bi-person"></i> Profil Bilgileri
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/Profile/Edit" class="nav-link link-dark">
+                            <i class="bi bi-pencil"></i> Profil Düzenle
+                        </a>
+                    </li>
+                    <li>
+                        <a href="/User/MyOrder/Index" class="nav-link link-dark">
+                            <i class="bi bi-box"></i> Siparişlerim
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link link-dark" data-bs-toggle="collapse" href="#moreMenu" role="button" aria-expanded="false" aria-controls="moreMenu">
+                            <i class="bi bi-list"></i> Mesajlar
+                        </a>
+                        <div class="collapse" id="moreMenu">
+                            <ul class="list-unstyled mr-3">
+                                <li><a class="nav-link link-dark" href="/User/Message/Inbox">Gelen Mesajlar</a></li>
+                                <li><a class="nav-link link-dark" href="/User/Message/Sendbox">Gönderilen Mesajlar</a></li>
+                                <li><a class="nav-link link-dark" href="/User/Message/SendMessage">Mesaj Gönder</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="/Logout" class="nav-link link-dark">
+                            <i class="bi bi-box-arrow-right"></i> Çıkış Yap
+                        </a>
+                    </li>
+                </ul>
+                <hr>
+            </div>
+        </div>

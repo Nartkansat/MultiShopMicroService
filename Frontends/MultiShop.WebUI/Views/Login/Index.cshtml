@@ -1,0 +1,62 @@
+﻿@model CreateLoginDto
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/UILayout/_UILayout.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="row px-xl-5">
+        <div class="col-12">
+            <nav class="breadcrumb bg-light mb-30">
+                <a class="breadcrumb-item text-dark" href="#">Anasayfa</a>
+                <span class="breadcrumb-item active">Giriş Yap</span>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row px-xl-5">
+
+        <div class="col-lg-4 mb-5 mx-auto">
+            <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4"><span class="bg-secondary pr-3">Giriş Yap</span></h2>
+
+            <div class="contact-form bg-light p-30">
+
+                <div id="success"></div>
+
+
+                <form method="post" novalidate="novalidate">
+                   
+                    <div class="control-group">
+                        <label>Kullanıcı Adı: </label>
+                        <input type="text" class="form-control" id="email" placeholder="Kullanıcı Adınız"
+                               required="required" data-validation-required-message="Lütfen Boş Geçmeyiniz." asp-for="Username"  />
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Şifre: </label>
+                        <input type="text" class="form-control" id="name" placeholder="Şifre"
+                               required="required" data-validation-required-message="Lütfen Boş Geçmeyiniz." asp-for="Password" />
+                        <p class="help-block text-danger"></p>
+                    </div>
+
+                    <div class="control-group">
+                        <label>Henüz hesabın yok mu? <a href="/Register/Index"> Hesap aç </a> </label>
+                    </div>
+
+                   
+                    <div>
+                        <button class="btn btn-primary py-2 px-4" type="submit" id="sendMessageButton">
+                            Giriş Yap
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+</div>

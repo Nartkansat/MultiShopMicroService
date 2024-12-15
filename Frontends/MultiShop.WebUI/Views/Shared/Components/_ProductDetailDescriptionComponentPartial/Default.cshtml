@@ -1,0 +1,14 @@
+﻿@model GetByIdProductDetailDto
+
+<div class="tab-pane fade show active" id="tab-pane-1">
+    <h4 class="mb-3">Ürün Açıklaması</h4>
+    @if(Model==null)
+    {
+        <p>Ürün Açıklaması Mevcut Değil.</p>
+    }
+    else
+    {
+        <p>@(!string.IsNullOrEmpty(Model.ProductDescription) ? Model.ProductDescription : "Ürün Açıklaması Mevcut Değil. ") </p>
+
+    }
+</div>
